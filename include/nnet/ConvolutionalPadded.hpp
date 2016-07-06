@@ -38,8 +38,8 @@ class ConvolutionalPadded: public Layer
 		nnet_float *frequencyInputs;
 		nnet_float *frequencyDeltaErrors;
 		nnet_float *frequencyDeltaWeights;
-		fftwf_plan forwardTransform;//声明一个plan，用于执行DFT
-		fftwf_plan backwardTransform;//用自己的实现，替换
+		fftwf_plan forwardTransform;
+		fftwf_plan backwardTransform;
 		std::size_t tensorRank;
 		std::size_t *inputDimensions;
 		std::size_t *kernelDimensions;
