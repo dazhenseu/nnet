@@ -4,8 +4,6 @@
 #include "ActivationFunction.hpp"
 #include "Layer.hpp"
 #include "UpdateRule.hpp"
-#include "fft2D.hpp"//自己添加的头文件，用于各种二维DCT的实现
-
 #include <fftw3.h>
 
 class ConvolutionalPadded: public Layer
@@ -44,7 +42,7 @@ class ConvolutionalPadded: public Layer
 		std::size_t *inputDimensions;
 		std::size_t *kernelDimensions;
 		std::size_t *outputDimensions;
-		std::size_t *paddedInputDimensions;  //pad input image
+		std::size_t *paddedInputDimensions;  //pad input image size
 		nnet_float initWeight;
 		ActivationFunction *activationFunction;
 		UpdateRule *updateRule;
